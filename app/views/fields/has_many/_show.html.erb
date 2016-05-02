@@ -25,7 +25,7 @@ from the associated resource class's dashboard.
     resources: field.resources
   ) %>
 
-  <% if field.more_than_limit? %>
+  <% if !!field && field.more_than_limit? %>
     <span>
       <%= t(
         'administrate.fields.has_many.more',
