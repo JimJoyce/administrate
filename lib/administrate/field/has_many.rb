@@ -37,6 +37,7 @@ module Administrate
       end
 
       def resources
+        binding.pry
         data.respond_to?(:limit) ? data.limit(limit) : DEFAULT_LIMIT
       end
 
