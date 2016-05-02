@@ -37,7 +37,7 @@ module Administrate
       end
 
       def resources
-        data.limit(limit)
+        data.respond_to?(:limit) ? data.limit(limit) : DEFAULT_LIMIT
       end
 
       def more_than_limit?
