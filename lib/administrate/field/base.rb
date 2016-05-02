@@ -18,7 +18,7 @@ module Administrate
 
       def initialize(attribute, data, page, options = {})
         @attribute = attribute
-        @data = data
+        @data = data || []
         @page = page
         @options = options
       end
